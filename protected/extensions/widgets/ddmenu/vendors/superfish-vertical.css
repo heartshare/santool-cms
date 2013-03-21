@@ -1,0 +1,30 @@
+.sf-menu a, .sf-menu span.active {
+    border-top: 1px solid #fff;
+    border-left: none;
+}
+/* adding sf-vertical in addition to sf-menu creates a vertical menu */
+.sf-vertical, .sf-vertical li {
+    width: 10em;
+}
+/* this lacks ul at the start of the selector, so the styles from the main CSS file override it where needed */
+.sf-vertical li:hover ul,
+.sf-vertical li.sfHover ul {
+    left: 10em;
+    top: 0;
+}
+
+/* alter arrow directions */
+.sf-vertical .sf-sub-indicator { background-position: -10px 0; }
+.sf-vertical a > .sf-sub-indicator,
+.sf-vertical span.active > .sf-sub-indicator { background-position: 0 0; }
+
+/* hover arrow direction for modern browsers */
+.sf-vertical a:focus > .sf-sub-indicator,
+.sf-vertical a:hover > .sf-sub-indicator,
+.sf-vertical a:active > .sf-sub-indicator,
+.sf-vertical li:hover > a > .sf-sub-indicator,
+.sf-vertical li.sfHover > a > .sf-sub-indicator,
+.sf-vertical li:hover > span.active > .sf-sub-indicator,
+.sf-vertical li.sfHover > span.active > .sf-sub-indicator {
+    background-position: -10px 0;
+}

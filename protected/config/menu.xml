@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<items>
+  <item>
+     <label>Home</label>
+     <url>array('site/index');</url>
+     <visible>!Yii::app()->user->isGuest;</visible>
+     <items>
+         <item>
+            <label>
+                Pages 1
+            </label>
+            <url>array('site/page1');</url>
+            <visible>!Yii::app()->user->isGuest;</visible>
+         </item>
+         <item>
+            <label>
+                Pages 2
+            </label>
+            <url>array('site/page1');</url>
+            <visible>!Yii::app()->user->isGuest;</visible>
+         </item>
+         <item>
+            <label>
+                Pages 3
+            </label>
+            <url>array('site/page1');</url>
+            <visible>!Yii::app()->user->isGuest;</visible>
+         </item>
+     </items>
+  </item>
+  <item>
+     <label>login</label>
+     <url>array('site/login');</url>
+     <visible>Yii::app()->user->isGuest;</visible>
+  </item>
+  <item>
+      <label>Contact</label>
+      <url>array('site/contact');</url>
+  </item>
+  <item>
+     <label>Logout</label>
+     <url>array('site/logout');</url>
+     <visible>!Yii::app()->user->isGuest;</visible>
+  </item>
+</items>

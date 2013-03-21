@@ -1,0 +1,4 @@
+[20-Mar-2013 11:53:03 Asia/Jakarta] PHP Parse error:  syntax error, unexpected ')' in /home2/ditkeuua/public_html/backend/themes/base/views/layouts/main.php on line 81
+[20-Mar-2013 12:16:39 Asia/Jakarta] PHP Parse error:  syntax error, unexpected T_DOUBLE_ARROW in /home2/ditkeuua/public_html/backend/protected/views/user/view.php on line 28
+[20-Mar-2013 12:18:07 Asia/Jakarta] PHP Parse error:  syntax error, unexpected T_DOUBLE_ARROW in /home2/ditkeuua/public_html/backend/protected/views/user/view.php on line 44
+[20-Mar-2013 12:35:46 Asia/Jakarta] PHP Parse error:  syntax error, unexpected ';' in /home2/ditkeuua/public_html/backend/protected/views/user/view.php on line 48

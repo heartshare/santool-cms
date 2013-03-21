@@ -1,0 +1,15 @@
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul
+{
+    top:2.9em;
+}
+
+.sf-sub-indicator
+{
+    right:.75em;
+}
+
+a > .sf-sub-indicator, span > .sf-sub-indicator
+{
+    top:1.1em;
+}

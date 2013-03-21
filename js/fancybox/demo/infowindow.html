@@ -1,0 +1,98 @@
+<html>    
+  <head> 
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <script type="text/javascript" src="../lib/jquery-1.9.0.min.js"></script>  
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="../lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="../source/jquery.fancybox.js?v=2.1.4"></script>
+	<link rel="stylesheet" type="text/css" href="../source/jquery.fancybox.css?v=2.1.4" media="screen" />
+
+	<!-- Add Button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="../source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+	<script type="text/javascript" src="../source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="../source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+	<script type="text/javascript" src="../source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="../source/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
+    <script type="text/javascript" src="../gmap3.js"></script> 
+    <style>
+      .gmap3{
+        margin: 20px auto;
+        border: 1px dashed #C0C0C0;
+        
+		width: 500px;
+        min-height: 250px;
+      }
+    </style>
+    
+    <script type="text/javascript">
+    
+      $(document).ready(function() {
+	  
+			//$('marker').fancybox();
+			
+			$("#test").gmap3({
+			  map:{
+				options:{
+				  center:[46.578498,2.457275],
+				  zoom: 5
+				}
+			  },
+			  marker:{
+				values:[
+				  {latLng:[48.8620722, 2.352047], data:"Paris !"},
+				  {address:"86000 Poitiers, France", data:"Poitiers : great city !"},
+				  {address:"66000 Perpignan, France", data:"Perpignan ! GO USAP !", options:{icon: "http://maps.google.com/mapfiles/marker_green.png"}}
+				],
+				options:{
+				  draggable: false
+				},
+				events:{
+				  click: function(marker, event, context){
+					var content = 				$.fancybox.open({
+					href : 'http://110.139.4.137/streaming/capture/gambar.jpg',
+					type : 'image',
+					//padding : 5
+				});
+					var map = $(this).gmap3("get"),
+					  infowindow = $(this).gmap3({get:{name:"infowindow"}});
+					if (infowindow){
+					  //infowindow.open(map, marker);
+					  //infowindow.setContent(context.data);
+					  
+					} else {
+					  $(this).gmap3({
+						infowindow:{
+						  anchor:marker, 
+						  options:{ //content: context.data}
+							content: content
+						  }
+						}
+					  });
+					}
+				  },
+				  close: function(){
+					var infowindow = $(this).gmap3({get:{name:"infowindow"}});
+					if (infowindow){
+					  infowindow.close();
+					}
+				  }
+				}
+			  }
+			});
+          
+      });
+    </script>  
+  </head>
+    
+  <body>
+    <div id="test" class="gmap3"></div>
+  </body>
+</html>
