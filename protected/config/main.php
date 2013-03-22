@@ -138,7 +138,7 @@ return array(
 		
 		'db'=>array(
                         'class'=>'CDbConnection',
-                                'connectionString' => 'mysql:host=localhost;port=3306;dbname=unair_ditkeu',
+                                'connectionString' => 'mysql:host=localhost;port=3306;dbname=santool',
                                 'emulatePrepare' => true,
                                 'username' => 'root',
                                 'password' => '123456',
