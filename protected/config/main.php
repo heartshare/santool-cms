@@ -138,10 +138,10 @@ return array(
 		
 		'db'=>array(
                         'class'=>'CDbConnection',
-                                'connectionString' => 'mysql:host=localhost;port=3306;dbname=ditkeuua_portal',
+                                'connectionString' => 'mysql:host=localhost;port=3306;dbname=unair_ditkeu',
                                 'emulatePrepare' => true,
-                                'username' => 'ditkeuua',
-                                'password' => '41rl4n664',
+                                'username' => 'root',
+                                'password' => '123456',
                                 'charset' => 'utf8',
                         ),
 		
