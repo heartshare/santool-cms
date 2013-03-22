@@ -20,9 +20,6 @@ return array(
 		'application.models.*',
 		'application.components.*',
                 'application.helpers.*',
-                //"ext.galleryManager.models.*"
-                //'ext.editable.*',
-                //'ext.bootstrap.*'
 	),
 
 	'modules'=>array(
@@ -32,10 +29,10 @@ return array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'admin',
 		 	// If removed, Gii defaults to localhost only. Edit carefully to taste.
-			'ipFilters'=>array('127.0.0.1','::1', '210.57.215.198', '139.193.23.181', '210.57.215.206'),
-                        'generatorPaths' => array(
-                           'bootstrap.gii'
-                        ),
+			'ipFilters'=>array('127.0.0.1','::1'),
+			'generatorPaths' => array(
+			   'bootstrap.gii'
+			),
 		),
 		
 	),
@@ -53,20 +50,10 @@ return array(
             'enableCookieValidation'=>true,
         ),
             
-                'bootstrap'=>array(
-                    'class'=>'ext.bootstrap.components.Bootstrap',
-					'responsiveCss' => true,
-                ),
-                /*
-                'image'=>array(
-                            'class'=>'application.extensions.image.CImageComponent',
-                            // GD or ImageMagick
-                            'driver'=>'GD',
-                            // ImageMagick setup path
-                            'params'=>array('directory'=>'C:/xampp/htdocs/unair/ditkeu/backend/local/bin/'),
-                        ),
-                 * 
-                 */
+		'bootstrap'=>array(
+			'class'=>'ext.bootstrap.components.Bootstrap',
+			'responsiveCss' => true,
+		),
                 
                 
 		// uncomment the following to enable URLs in path-format
@@ -91,14 +78,14 @@ return array(
                 */
 		// uncomment the following to use a PgSQL database
 		'db'=>array(
-                    'tablePrefix'=>'',
-				//'class'=> 'MydbConection',
-                                'connectionString' => 'mysql:host=localhost;port=3306;dbname=santool',
-                                'emulatePrepare' => true,
-                                'username' => 'root',
-                                'password' => '123456',
-                                'charset' => 'utf8',
-                        ),
+			'tablePrefix'=>'',
+			//'class'=> 'MydbConection',
+			'connectionString' => 'mysql:host=localhost;port=3306;dbname=santool',
+			'emulatePrepare' => true,
+			'username' => 'root',
+			'password' => '123456',
+			'charset' => 'utf8',
+        ),
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
             'errorAction'=>'site/error',
